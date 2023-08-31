@@ -1,56 +1,15 @@
-# dbt-source_db
+Welcome to your new dbt project!
 
-The `dbt-source_db` package allows you to specify the source database that dbt should read from. This enables reading from one database and writing to another. 
+### Using the starter project
 
-## Getting Started 
+Try running the following commands:
+- dbt run
+- dbt test
 
-Install the package:
 
-```bash
-dbt hub install dbt-labs/source_db
-```
-
-In your `dbt_project.yml` file, add the package:
-
-```yml
-packages:
-  - package: dbt-labs/source_db
-```
-
-## Usage
-
-Set the `SRC_DB` environment variable to the source database you want dbt to read from:
-
-```bash
-export SRC_DB=dev_db
-```
-
-Then run dbt as usual. The `ref()` and `source()` macros will read from `SRC_DB` instead of the default target database. 
-
-Or you can set the variable within the same command.
-
-For example:
-
-```bash
-SRC_DB=dev_db dbt run
-```
-
-This will read all sources and refs from `dev_db`, but write to the database in your profile/target.
-
-## Example
-
-You have a _sandbox_ and _production_ database. You want to test a new model `my_model` in _sandbox_, but reading data from _production_.
-
-Run the model:
-
-```bash
-SRC_DB=prod_db dbt run --models my_model
-```
-
-This will read from `prod_db` but write `my_model` to _sandbox_.
-
-## Macro reference
-
-- `ref(model_name)`: Reads `model_name` from `SRC_DB` instead of target database.
-
-- `source(source_name, table_name)`: Reads `table_name` from `SRC_DB` instead of target database.
+### Resources:
+- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
+- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
+- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
+- Find [dbt events](https://events.getdbt.com) near you
+- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
