@@ -1,6 +1,6 @@
-# dbt-source_db
+# dbt source_db
 
-The `dbt-source_db` package allows you to specify the source database that dbt should read from. This enables reading from one database and writing to another. 
+The `source_db` package allows you to specify the source database that dbt should read from. This enables reading from one database and writing to another. 
 
 ## Getting Started 
 
