@@ -1,4 +1,4 @@
-{% macro source(source_name, table_name, lowercase=False) %}
+{% macro source(source_name, table_name, lowercase=False, v=None) %}
   {%- set src_db = env_var('SRC_DB', '') -%}
   {%- set default_database = target.database -%}
   {%- set source_relation = builtins.source(source_name, table_name) -%}

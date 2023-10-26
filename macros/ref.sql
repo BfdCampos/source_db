@@ -1,4 +1,4 @@
-{% macro ref(model_name) %}
+{% macro ref(model_name, v=None) %}
   {%- set src_db = env_var('SRC_DB', '') -%}
   {%- set default_database = target.database -%}
   {%- set model_relation = builtins.ref(model_name) -%}
